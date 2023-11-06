@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from "react";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import Skills from "./Components/Skills";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Resume from "./Components/Resume";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Navbar />
+        <div className='bg-[#242424] w-full min-h-screen '>
+          <Home />
+          <About />
+          <Skills />
+          <Resume />
+          <Contact />
+        </div>
+      </div>
   );
 }
 
